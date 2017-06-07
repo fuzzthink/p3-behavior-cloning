@@ -1,5 +1,5 @@
 
-To train a computer to drive itself, images from a camera attached to the car and its corresponding steering and other outputs can be feed to a convolutional neural network to learn its own outputs when it encounters similar data. This technique is called behavorial cloning.
+To train a computer to drive itself, images from a camera attached to the car and its corresponding steering and other outputs can be feed to a convolutional neural network to learn its own outputs when it encounters similar data. This technique is called behavioral cloning.
 
 The goals / steps of this [project](https://github.com/udacity/CarND-Behavioral-Cloning-P3) are the following:
 
@@ -28,7 +28,7 @@ The project includes the following files:
 
 ---
 ### Training 
-The model is trained by a dataset of images from the car camera's point of view of the road and its corresponding steering angles. These are specified in `datapaths.py`. The recorded dataset used can be found in [here](https://github.com/fuzzthink/P3-recorded-data).
+The model is trained by a dataset of images from the car camera's point of view of the road and its corresponding steering angles. These are specified in `datapaths.py`. The recorded dataset is stored in a separate [repo](https://github.com/fuzzthink/P3-recorded-data).
 
 You can train your model with above recorded dataset, use [Udacity's recorded dataset](http://d2uz2655q5g6b2.cloudfront.net/46a70500-493e-4057-a78e-b3075933709d/169019/Behavioral%20Cloning%20Videos.zip), or generate your own data via the record feature in the simulator. To do so, first start the simulator.
 ```sh 
@@ -165,7 +165,7 @@ So throttle of 0.1 is good. But thought I can do better.
 
 What if I amplify the model by upping the speed at straight roads and slowing down and steering more than model suggests at sharp turns? 
 
-I set the throttle at .2 nornally and when the absolute value of steering input is over 4, I brake at .0001 x absolute steering value. This slows it down to ~11 mph at sharp turns. The steering is multiplied by 1.5 if absolute steering input is over 4 and multiplied by 1.8 if over 6.
+I set the throttle at 0.2 normally and when the absolute value of steering input is over 4, I brake at .0001 x absolute steering value. This slows it down to ~11 mph at sharp turns. The steering is multiplied by 1.5 if absolute steering input is over 4 and multiplied by 1.8 if over 6.
 
 This setting runs the laps at a much higher speed and it ran over 1.5 hrs, or over 66 laps without going off course.
 
